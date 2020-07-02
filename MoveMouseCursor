@@ -1,0 +1,17 @@
+import pyautogui  // Install the package using pip install pyautogui
+import time
+import sys
+from datetime import datetime
+import random
+
+random_generated_x = random.randrange(0,1920) // Generating Random number for x coordinate for moving cursor
+random_generated_y = random.randrange(0,1080) // Generating Random number for y coordinate for moving cursor
+//print(pyautogui.size()) //To check your screen size
+
+while(random_generated_x > 0):
+    time.sleep(5)
+    print("Moving to coordinates \n x:",random_generated_x,"\n y:",random_generated_y)
+    pyautogui.moveTo(random_generated_x,random_generated_y, duration = 0.5)
+    random_generated_x = random.randrange(0,100)
+    random_generated_y = random.randrange(0,100)
+    
